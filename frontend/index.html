@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Main</title>
+    <style>body{ background-color: #D3D3D3;}</style>
+</head>
+<body>
+    <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" style="font-family: Roboto;" href="index.html">Main</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-family: Roboto;" href="Registration.html">Registration</a>
+            </li>
+          </ul>
+        </div>
+        <br> 
+        <div id="app">
+            <div class="card-deck" style="background-color: #FFF0F5;">
+                <div class="card bg-light mb-3 border-info mb-3" style="max-width: 15rem; text-align: center;" v-for="(result,index) in results">
+                    <div class="card-body">
+                        <img :src="result.avatar" v-bin:alt="results" class="card-img-top picture">
+                        <p class="mytext text-info card-text">{{ result.first_name }}</p>
+                        <p class="mytext text-info card-text">{{ result.last_name }}</p>
+                        <input type="button" value="delete" class="mytext btn btn-danger" style="width: fit-content; margin: auto;" v-on:click="deleteById(index)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>

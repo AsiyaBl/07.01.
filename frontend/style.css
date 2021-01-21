@@ -1,0 +1,28 @@
+.SignUp{
+    height: 17rem;
+    width: 15rem;
+    margin: auto;
+    text-align: center;
+    border:solid 1px rgb(219, 219, 219);
+}
+.mytext{
+    font-family: Roboto;
+    font-size: 120%;
+}
+a{
+    color: rgb(53, 52, 52);
+    font-family: cursive;
+    font-size: large;
+}
+a:hover{
+    color: rgb(1,1,1);
+    font-style: Roboto;
+}
+.picture{
+    margin: auto;
+    height: 128px;
+    width: 128px;
+}
+.bg-info {
+    background-color: rgba(197, 161, 161, 0.815) !important;
+}
