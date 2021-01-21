@@ -16,6 +16,9 @@
     <div class="card text-center">
         <div class="card-header">
           <ul class="nav nav-tabs card-header-tabs">
+            <a class="navbar-brand" href="#">
+              <img src="send.png" alt="" width="30" height="24">
+            </a>
             <li class="nav-item">
               <a class="nav-link active" style="font-family: Roboto;" href="index.html">Main</a>
             </li>
@@ -26,7 +29,7 @@
         </div>
         <br> 
         <div id="app">
-            <div class="card-deck" style="background-color: #FFF0F5;">
+            <div class="card-deck" style="background-color: rgba(197, 161, 161, 0.815);">
                 <div class="card bg-light mb-3 border-info mb-3" style="max-width: 15rem; text-align: center;" v-for="(result,index) in results">
                     <div class="card-body">
                         <img :src="result.avatar" v-bin:alt="results" class="card-img-top picture">
