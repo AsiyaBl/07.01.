@@ -1,4 +1,4 @@
-const url = "http://localhost:3000/users";
+const url = "https://firstmysait.herokuapp.com/users";
 const vn = new Vue({
     el:"#app",
     data:{
@@ -14,7 +14,7 @@ const vn = new Vue({
             let id = this.results[index].id
             if(confirm('delete '+id+'?')){
             this.results.splice(index,1)
-            await axios.delete("http://localhost:3000/users/" + id)}
+            await axios.delete(url + "/" + id)}
         },
         async register(){
             if(first_n.value === "" || last_n.value === "" || avatarka.value === "" || email.value === "" || password.value === ""){
@@ -26,7 +26,7 @@ const vn = new Vue({
                 return
             }
             else{
-            await axios.post("http://localhost:3000/users",{"first_name":`${first_n.value}`,"last_name":`${last_n.value}`,"avatar":`${avatarka.value}`,"email":`${email.value}`,"password":`${password.value}`})
+            await axios.post(url,{"first_name":`${first_n.value}`,"last_name":`${last_n.value}`,"avatar":`${avatarka.value}`,"email":`${email.value}`,"password":`${password.value}`})
             alert("пользователь создан")
             first_n.value=null;
             last_n.value=null;

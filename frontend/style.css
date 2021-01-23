@@ -26,3 +26,9 @@ a:hover{
 .bg-info {
     background-color: rgba(197, 161, 161, 0.815) !important;
 }
+.border-info {
+    border-color: black!important;
+}
+.text-info {
+    color: black!important;
+}
